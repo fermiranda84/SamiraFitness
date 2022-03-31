@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: modernFont;
+  src: url(../assets/fonts/ModernSans-Light.otf)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body {
+  font-family: modernFont, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: #fbf4f4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav {
+  background-color: #fbf4f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.iconoCarrito {
+  background-color: #e1a2ab;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 0.3vw;
 }
+
+.tituloMain {
+  color: #bb4c5a;
+}
+
+.botonMain {
+  background-color: #e1a2ab;
+}
+
+.botonMain:hover {
+  background-color: #c48b93;
+}
+
+.mainContainer {
+  margin-top: 5vw;
+}
+
+.mainCirculo {
+  width: 30vw;
+}
+
+.textMain {
+  width: 30vw;
+}
+
+.mainBody {
+  border-radius: 3vw;
+  box-shadow: 0 0 40px rgba(0,0,0,0.25);
+}
+
+.pointer {
+ position: relative;
+  width: 90px;
+  height: 82.18px;
+  left: 50%;
+  transform: translateX(-50px);
+  top: -308px;
+  border-radius: 4px;
+  background-image: url(./images/pointer.svg);
+  background-repeat: no-repeat;
+}
+
+
+
