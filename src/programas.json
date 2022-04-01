@@ -1,0 +1,27 @@
+
+    {
+        "programas": [
+
+            {"id": 1, "titulo": "Programa Mensual", "imagen": "programaMensual", "precio": 4500, "duracion": "4 SEMANAS", "descripcion": "ENTRENAMIENTO + GUIA ALIMENTARIA PERSONALIZADO"},
+            {"id": 2, "titulo": "8 Weeks Program", "imagen": "EightWeeksProgram", "precio": 6000, "duracion": "8 SEMANAS", "descripcion": "ENTRENAMIENTO + NUTRICIÓN PERSONALIZADO"},
+            {"id": 3, "titulo": "12 Weeks Program", "imagen": "TwelveWeeksProgram", "precio": 8925, "duracion": "TRANSFORMACIÓN TOTAL", "descripcion": "ENTRENAMIENTO + NUTRICIÓN PERSONALIZADO"}
+            
+        ],
+
+        "clases": [
+
+            {"id": 4, "titulo": "Clases Advance Online", "imagen": "clasesAdvance", "precio": 4500, "duracion": "20 CLASES POR ZOOM", "descripcion": "TODAS QUEDAN GRABADAS MENSUAL - GRUPAL"},
+            {"id": 5, "titulo": "Pack 12 Clases Online", "imagen": "TwelveClasesOnline", "precio": 3500, "duracion": "12 CLASES GRABADAS", "descripcion": "NIVEL PRINCIPIANTE - MENSUAL"},
+            {"id": 6, "titulo": "Pack 20 Clases Online", "imagen": "TwentyClasesOnline", "precio": 4500, "duracion": "20 CLASES GRABADAS", "descripcion": "NIVEL INTERMEDIO/AVANZADO - MENSUAL"}
+            
+        ],
+
+        "extras": [
+
+            {"id": 7, "titulo": "Recetario", "imagen": "recetario", "precio": 2800, "duracion": "50 RECETAS", "descripcion": "APRENDÉ A CALCULAR TUS KCAL Y MACROS EN FORMATO PDF"},
+            {"id": 8, "titulo": "Gift Card", "imagen": "giftCard", "precio": 3000, "duracion": "GIFT CARD", "descripcion": "REGALÁ SALUD Y CALIDAD DE VIDA. A PARTIR DE $3000"}
+            
+        ]
+
+    }
+

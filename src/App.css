@@ -3,6 +3,12 @@
   src: url(../assets/fonts/ModernSans-Light.otf)
 }
 
+@font-face {
+  font-family: mirageFont;
+  src: url(../assets/fonts/MadeMirage-Medium.otf)
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +44,7 @@ a {
 
 .tituloMain {
   color: #bb4c5a;
+  margin-top: 10vw;
 }
 
 .botonMain {
@@ -48,34 +55,321 @@ a {
   background-color: #c48b93;
 }
 
+.botonMain:disabled {
+  background-color: #c48b93;
+}
+
+
 .mainContainer {
   margin-top: 5vw;
 }
 
 .mainCirculo {
-  width: 30vw;
-}
-
-.textMain {
-  width: 30vw;
+  margin-top: 10vw;
 }
 
 .mainBody {
   border-radius: 3vw;
   box-shadow: 0 0 40px rgba(0,0,0,0.25);
+  position: relative;
 }
 
-.pointer {
- position: relative;
-  width: 90px;
-  height: 82.18px;
-  left: 50%;
-  transform: translateX(-50px);
-  top: -308px;
-  border-radius: 4px;
+.mainBody::after {
+  content: '';
+  position: absolute;
+  display: block;
   background-image: url(./images/pointer.svg);
   background-repeat: no-repeat;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -31px;
+  height: 100px;
+  width: 100px;
+
+}
+
+.mainBody::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url(./images/pointer.svg);
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  bottom: -31px;
+  height: 100px;
+  width: 100px;
+
+}
+
+
+.mainBody--logo {
+  display: block;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainBody--title {
+  font-family: mirageFont;
+  color: #bb4c5a;
+}
+
+.mainBody--card {
+  background-color: #e1a2ab;
+  border-radius: 0.5vw;
+}
+
+.mainBody--card--img {
+  border-radius: 0.5vw;
+  width: 100vw;
+}
+
+.mainBody--card--text {
+  background-color: rgba(255,254,254,0.7);
+}
+
+.mainBody-text{
+  font-size: 3vw;
+}
+
+.mainBody--foodImg{
+  width: 20vw;
+}
+
+ .mainBody--line {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContacto--bajada {
+  font-size: 3vw;
+}
+
+.mainContacto--form {
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+  "mainContacto--form--nombre"
+  "mainContacto--form--apellido"
+  "mainContacto--form--email"
+  "mainContacto--form--direccion"
+  "mainContacto--form--consulta"
+  "mainContacto--form--sexo"
+  "mainContacto--form--boton"
+  ;
+  align-items: center;
+}
+
+.mainContacto--form--nombre{
+  grid-area: mainContacto--form--nombre;
+}
+
+.mainContacto--form--apellido{
+  grid-area: mainContacto--form--apellido;
+}
+
+.mainContacto--form--email{
+  grid-area: mainContacto--form--email;
+}
+
+.mainContacto--form--direccion{
+  grid-area: mainContacto--form--direccion;
+}
+
+.mainContacto--form--consulta{
+  grid-area: mainContacto--form--consulta;
+}
+
+.mainContacto--form--sexo{
+  grid-area: mainContacto--form--sexo;
+}
+
+.mainContacto--form--boton{
+  grid-area: mainContacto--form--boton;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContacto--form--consulta__resize{
+  resize: none;
+}
+
+.mainContacto__form__sexo--ancho{
+  width: 50vw;
+}
+
+.footer__arrow {
+  color: #bb4c5a;
+}
+
+.footer__container {
+  background-color: #faeaec;
+}
+
+.programas__categoria {
+  font-family: mirageFont;
+  margin-top: 6vw;
+}
+
+.cardProgramas__card {
+  width: 15vw;
+  background-color: #e1a2ab;
+  border-radius: 0.5vw;
+}
+
+.cardProgramas__card--sizeTexto {
+  font-size: 0.75vw;
+}
+
+.footer__container--marginItems{
+  margin-top: 3vw;
 }
 
 
 
+/* --------------------------Tablet 768----------------------------- */
+
+@media screen and (min-width:768px) { 
+
+
+
+  .mainBody-text{
+    font-size: 2.25vw;
+  }
+
+}
+
+/* --------------------------Tablet 992----------------------------- */
+
+@media screen and (min-width:992px) { 
+
+  .navBar__items{
+    margin-left: 16vw;
+  }
+
+  .tituloMain {
+    margin-top: 5vw;
+  }
+
+  .textMain {
+    width: 50vw;
+  }
+
+  .mainCirculo {
+    width: 40vw;
+    margin-top: 0;
+  }
+
+
+   .mainBody--card {
+    width: 29vw;
+  }
+
+  .mainBody-text{
+    font-size: 1.75vw;
+  }
+
+  .mainBody--foodImg{
+    width: 15vw;
+  }
+
+  .mainContacto--bajada {
+    font-size: 1.75vw;
+  }
+
+ 
+  .mainContacto__form__sexo--ancho{
+    width: 10vw;
+  }
+
+  .footer__container--marginItems{
+    margin-top: 0;
+  }
+
+  .mainContacto--form {
+    grid-template-areas:
+    "mainContacto--form--nombre mainContacto--form--apellido"
+    "mainContacto--form--email mainContacto--form--direccion"
+    "mainContacto--form--consulta mainContacto--form--sexo"
+    "mainContacto--form--boton mainContacto--form--boton"
+    ;
+  }
+
+}
+
+/* --------------------------Tablet 1200----------------------------- */
+
+@media screen and (min-width:1200px) { 
+
+  .tituloMain {
+    margin-top: 5vw;
+  }
+
+  .textMain {
+    width: 40vw;
+  }
+
+  .mainCirculo {
+    width: 40vw;
+    margin-top: 0;
+  }
+
+  .navBar__items{
+    margin-left: 18vw;
+  }
+
+
+  .mainBody-text{
+    font-size: 1.5vw;
+    width: 40vw;
+  }
+
+  .mainBody--card {
+    width: 15vw;
+  }
+
+  .mainContacto--bajada {
+    font-size: 1.6vw;
+  }
+
+
+}
+
+
+/* --------------------------Tablet 1400----------------------------- */
+
+@media screen and (min-width:1400px) { 
+
+  .tituloMain {
+    margin-top: 0;
+  }
+
+  .textMain {
+    width: 30vw;
+    font-size: 1vw;
+  }
+
+  .mainCirculo {
+    width: 30vw;
+    margin-top: 0;
+  }
+
+  .mainBody-text{
+    font-size: 0.95vw;
+    width: 25vw;
+  }
+
+  .mainBody--card {
+    width: 12vw;
+  }
+
+
+  .mainContacto--bajada {
+    font-size: 1.1vw;
+  }
+
+
+}

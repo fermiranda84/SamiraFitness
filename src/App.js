@@ -8,26 +8,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      {/* <BrowserRouter>
-        <NavBar/>
-
-        
-
-          <Route exact path='/'>
-            <Main/>
-          </Route>
-
-          <Route exact path='/newAccount/'>
-            <NewAccount/>
-          </Route>
-
-          <Route exact path='/newBike/'>
-            <NewBike/>
-          </Route>
-
-        
-
-      </BrowserRouter> */}
 
       <BrowserRouter>
       

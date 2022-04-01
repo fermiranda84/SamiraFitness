@@ -1,12 +1,15 @@
 import Image from 'react-bootstrap/Image'
 import mainCirculo from'../images/mainCirculo.png'
+import { Footer } from './Footer'
 import { MainBody } from './MainBody'
+import { MainContacto } from './MainContacto'
+import { ArrowUp} from 'react-bootstrap-icons';
 
 export const Main = () => {
     return(
 
        <>
-        <div className="d-flex align-items-center container mainContainer justify-content-between">
+        <div id='header' className="d-flex flex-wrap align-items-center container mainContainer justify-content-between">
             <div>
                     <h2 className="tituloMain fw-bold mb-4">Una meta sin un plan es solo un deseo</h2>
                 
@@ -23,6 +26,9 @@ export const Main = () => {
         </div>
 
         <MainBody/>
+        <MainContacto/>
+        <div className="text-end container"><a href='#header'><ArrowUp className='footer__arrow' size={25} /></a></div>
+        <Footer/>
 
        </>
 
