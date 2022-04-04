@@ -4,19 +4,17 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 
-export const MainContacto = () => {
+export const MainContacto = ({titulo = "¿Querés entrenar de forma personalizada online?", subtitulo = "Consultame precios y disponibilidad horaria"}) => {
 
     const [valorDisabled, setValorDisabled] = useState(true)
 
-    return(
-
-       <>
+    return (
         <div id='contacto' className='container mt-5'>
-            <h3 className='text-center mainBody--title'>¿Querés entrenar de forma personalizada online?</h3>
-            <p className="text-center mainContacto--bajada">Consultame precios y disponibilidad horaria</p>
+            <h3 className='text-center mainBody--title'>{titulo}</h3>
+            <p className="text-center mainContacto--bajada">{subtitulo}</p>
             <Image className='mainBody--line mt-3' src={line} fluid />
 
-            <Form action="mailto:samira.contreras93@gmail.com" method="get"  className='mt-5'>
+            <Form action="mailto:samira.contreras93@gmail.com" method="get" className='mt-5'>
                 <div className='mainContacto--form'>
                     <Form.Group className="mb-3 mainContacto--form--nombre" >
                         <Form.Label>Nombre</Form.Label>
@@ -46,9 +44,9 @@ export const MainContacto = () => {
                     <Form.Group className="mb-3 mainContacto--form--sexo">
                         <Form.Label>Sexo</Form.Label>
                         <Form.Select className='mainContacto__form__sexo--ancho'>
-                        <option>Femenino</option>
-                        <option>Masculino</option>
-                        <option>Otro</option>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                            <option>Otro</option>
                         </Form.Select>
                         <Form.Check onClick={() => setValorDisabled((prevCheck) => !prevCheck)} className='mt-3' type="checkbox" label="Acepto términos y condiciones" />
                     </Form.Group>
@@ -61,7 +59,5 @@ export const MainContacto = () => {
                 </div>
             </Form>
         </div>
-       </>
-
     )
 }

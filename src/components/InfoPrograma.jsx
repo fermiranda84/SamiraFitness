@@ -1,32 +1,110 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import { Footer } from './Footer'
 import { Col, Container, Row, Stack } from 'react-bootstrap'
 import Boton from './Boton'
-import imagen from '../images/programa-1.jpg'
 import { CardProgramas } from './CardProgramas'
 import data from '../programas.json'
 import { MainContacto } from './MainContacto'
+import { useParams } from 'react-router-dom'
+// Imagenes
+import programaMensual from '../images/programa-1.jpg'
+import EightWeeksProgram from '../images/programa-2.jpg'
+import TwelveWeeksProgram from '../images/programa-3.jpg'
+import clasesAdvance from '../images/programa-4.jpg'
+import TwelveClasesOnline from '../images/programa-5.jpg'
+import TwentyClasesOnline from '../images/programa-6.jpg'
+import recetario from '../images/programa-7.jpg'
+import giftCard from '../images/programa-8.jpg'
 
-const InfoPrograma = ({ titulo, deQueSeTrata, aQuienVa, beneficios, img }) => {
+const InfoPrograma = () => {
+    let { tipo, programa } = useParams();
+    const [titulo, setTitulo] = React.useState("");
+    const [deQue, setDeQue] = React.useState("");
+    const [aQuien, setAQuien] = React.useState("");
+    const [beneficios, setBeneficios] = React.useState("");
+    const [imagen, setImagen] = React.useState("");
+    const [tmb, setTmb] = React.useState([]);
+
+    React.useEffect(() => {
+        let programs;
+        let program;
+        switch (tipo) {
+            case 'programas':
+                programs = data.programas.filter(prog => prog.url === programa);
+                setTmb(data.programas.filter(prog => prog.url !== programa));
+                program = programs[0];
+                break;
+            case 'clases':
+                programs = data.clases.filter(prog => prog.url === programa);
+                setTmb(data.clases.filter(prog => prog.url !== programa));
+                program = programs[0];
+                break;
+            case 'extras':
+                programs = data.extras.filter(prog => prog.url === programa);
+                setTmb(data.extras.filter(prog => prog.url !== programa));
+                program = programs[0];
+                break;
+            default:
+                console.error('Mal hecho pa');
+                break;
+        }
+        setTitulo(program.titulo)
+        setDeQue(program.deQue);
+        setAQuien(program.aQuien);
+        setBeneficios(program.beneficios);
+        switch (program.imagen) {
+            case 'programaMensual':
+                setImagen(programaMensual)
+                break;
+            case 'EightWeeksProgram':
+                setImagen(EightWeeksProgram)
+                break;
+            case 'TwelveWeeksProgram':
+                setImagen(TwelveWeeksProgram)
+                break;
+            case 'clasesAdvance':
+                setImagen(clasesAdvance)
+                break;
+            case 'TwelveClasesOnline':
+                setImagen(TwelveClasesOnline)
+                break;
+            case 'TwentyClasesOnline':
+                setImagen(TwentyClasesOnline)
+                break;
+            case 'recetario':
+                setImagen(recetario)
+                break;
+            case 'giftCard':
+                setImagen(giftCard)
+                break;
+            default:
+                setImagen(programaMensual)
+                break;
+
+        }
+        console.log(program)
+    }, [tipo, programa])
+
     return (
         <Container>
             <Row className="d-flex flex-column align-items-start">
-                <h2 className="titulo fw-bold">Titulo</h2>
+                <h2 className="titulo fw-bold">{titulo}</h2>
                 <hr style={{ width: '100%' }} />
             </Row>
             <Row>
                 <Col xs={12} lg={7}>
                     <Row>
                         <h3>¿De que se trata?</h3>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>{deQue}</p>
                     </Row>
                     <Row>
                         <h3>¿A quién va dirigido?</h3>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                        <p>{aQuien}</p>
                     </Row>
                     <Row>
                         <h3>Beneficios</h3>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                        <p>{beneficios}</p>
                     </Row>
                 </Col>
                 <Col xs={12} lg={5} className="d-flex flex-column align-items-center justify-content-start">
@@ -38,12 +116,12 @@ const InfoPrograma = ({ titulo, deQueSeTrata, aQuienVa, beneficios, img }) => {
                 <h3>También te puede interesar:</h3>
                 <hr />
                 <Stack direction="horizontal" gap={3}>
-                    {data?.programas.map((programa, index) =><CardProgramas key={index} item={programa} />)}
+                    {tmb?.map((programa, index) => <Link className="cards-links" key={index} to={`/${tipo}/${programa.url}`}><CardProgramas item={programa} /></Link>)}
                 </Stack>
             </Row>
             <hr style={{ width: '100%' }} />
             <Row>
-                <MainContacto />
+                <MainContacto titulo="¿Todavía tenes dudas?" subtitulo="Consultame y a la brevedad te estaré respondiendo" />
             </Row>
             <Footer />
         </Container>

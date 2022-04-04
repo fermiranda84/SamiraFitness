@@ -25,6 +25,10 @@ a {
   color: white;
 }
 
+a.cards-links {
+  color: inherit !important;
+}
+
 .nav {
   background-color: #fbf4f4;
   position: fixed;
