@@ -2,17 +2,18 @@ import Image from 'react-bootstrap/Image'
 import line from '../images/line.svg'
 import data from '../programas.json'
 import { CardProgramas } from './CardProgramas'
-import { ArrowUp} from 'react-bootstrap-icons'
+import { ArrowUp } from 'react-bootstrap-icons'
 import { Footer } from './Footer'
+import { Link } from 'react-router-dom'
 
 export const Programas = () => {
 
-    
+
     console.log(data)
 
-    return(
+    return (
 
-       <div id='header' className='bg-white'>
+        <div id='header' className='bg-white'>
             <div className='container mainContainer'>
                     <h2 className="tituloMain pt-5 text-center fw-bold">Programas a tu medida</h2>
                     <Image className='mainBody--line my-2' src={line} fluid />
@@ -43,8 +44,8 @@ export const Programas = () => {
 
             </div>
             <div className="text-end container"><a href='#header'><ArrowUp className='footer__arrow' size={25} /></a></div>
-            <Footer/>
-       </div>
+            <Footer />
+        </div>
 
     )
 }

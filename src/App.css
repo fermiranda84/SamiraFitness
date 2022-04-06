@@ -25,6 +25,10 @@ a {
   color: white;
 }
 
+a.cards-links {
+  color: inherit !important;
+}
+
 .nav {
   background-color: #fbf4f4;
   position: fixed;
@@ -70,7 +74,7 @@ a {
 
 .mainBody {
   border-radius: 3vw;
-  box-shadow: 0 0 40px rgba(0,0,0,0.25);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 
@@ -130,15 +134,15 @@ a {
   font-size: 4vw;
 }
 
-.mainBody-text{
+.mainBody-text {
   font-size: 3vw;
 }
 
-.mainBody--foodImg{
+.mainBody--foodImg {
   width: 20vw;
 }
 
- .mainBody--line {
+.mainBody--line {
   display: block;
   width: 100px;
   margin-left: auto;
@@ -153,52 +157,52 @@ a {
   display: grid;
   gap: 30px;
   grid-template-areas:
-  "mainContacto--form--nombre"
-  "mainContacto--form--apellido"
-  "mainContacto--form--email"
-  "mainContacto--form--direccion"
-  "mainContacto--form--consulta"
-  "mainContacto--form--sexo"
-  "mainContacto--form--boton"
+    "mainContacto--form--nombre"
+    "mainContacto--form--apellido"
+    "mainContacto--form--email"
+    "mainContacto--form--direccion"
+    "mainContacto--form--consulta"
+    "mainContacto--form--sexo"
+    "mainContacto--form--boton"
   ;
   align-items: center;
 }
 
-.mainContacto--form--nombre{
+.mainContacto--form--nombre {
   grid-area: mainContacto--form--nombre;
 }
 
-.mainContacto--form--apellido{
+.mainContacto--form--apellido {
   grid-area: mainContacto--form--apellido;
 }
 
-.mainContacto--form--email{
+.mainContacto--form--email {
   grid-area: mainContacto--form--email;
 }
 
-.mainContacto--form--direccion{
+.mainContacto--form--direccion {
   grid-area: mainContacto--form--direccion;
 }
 
-.mainContacto--form--consulta{
+.mainContacto--form--consulta {
   grid-area: mainContacto--form--consulta;
 }
 
-.mainContacto--form--sexo{
+.mainContacto--form--sexo {
   grid-area: mainContacto--form--sexo;
 }
 
-.mainContacto--form--boton{
+.mainContacto--form--boton {
   grid-area: mainContacto--form--boton;
   margin-left: auto;
   margin-right: auto;
 }
 
-.mainContacto--form--consulta__resize{
+.mainContacto--form--consulta__resize {
   resize: none;
 }
 
-.mainContacto__form__sexo--ancho{
+.mainContacto__form__sexo--ancho {
   width: 50vw;
 }
 
@@ -224,7 +228,7 @@ a {
   font-size: 3vw;
 }
 
-.footer__container--marginItems{
+.footer__container--marginItems {
   margin-top: 3vw;
 }
 
@@ -237,7 +241,7 @@ a {
 
 /* --------------------------Tablet 768----------------------------- */
 
-@media screen and (min-width:768px) { 
+@media screen and (min-width:768px) {
 
 
   .mainBody-text{
@@ -249,9 +253,9 @@ a {
 
 /* --------------------------Tablet 992----------------------------- */
 
-@media screen and (min-width:992px) { 
+@media screen and (min-width:992px) {
 
-  .navBar__items{
+  .navBar__items {
     margin-left: 16vw;
   }
 
@@ -269,15 +273,15 @@ a {
   }
 
 
-   .mainBody--card {
+  .mainBody--card {
     width: 29vw;
   }
 
-  .mainBody-text{
+  .mainBody-text {
     font-size: 1.75vw;
   }
 
-  .mainBody--foodImg{
+  .mainBody--foodImg {
     width: 15vw;
   }
 
@@ -285,21 +289,21 @@ a {
     font-size: 1.75vw;
   }
 
- 
-  .mainContacto__form__sexo--ancho{
+
+  .mainContacto__form__sexo--ancho {
     width: 10vw;
   }
 
-  .footer__container--marginItems{
+  .footer__container--marginItems {
     margin-top: 0;
   }
 
   .mainContacto--form {
     grid-template-areas:
-    "mainContacto--form--nombre mainContacto--form--apellido"
-    "mainContacto--form--email mainContacto--form--direccion"
-    "mainContacto--form--consulta mainContacto--form--sexo"
-    "mainContacto--form--boton mainContacto--form--boton"
+      "mainContacto--form--nombre mainContacto--form--apellido"
+      "mainContacto--form--email mainContacto--form--direccion"
+      "mainContacto--form--consulta mainContacto--form--sexo"
+      "mainContacto--form--boton mainContacto--form--boton"
     ;
   }
 
@@ -324,7 +328,7 @@ a {
 
 /* --------------------------Tablet 1200----------------------------- */
 
-@media screen and (min-width:1200px) { 
+@media screen and (min-width:1200px) {
 
   .tituloMain {
     margin-top: 5vw;
@@ -339,12 +343,12 @@ a {
     margin-top: 0;
   }
 
-  .navBar__items{
+  .navBar__items {
     margin-left: 18vw;
   }
 
 
-  .mainBody-text{
+  .mainBody-text {
     font-size: 1.5vw;
     width: 40vw;
   }
@@ -367,7 +371,7 @@ a {
 
 /* --------------------------Tablet 1400----------------------------- */
 
-@media screen and (min-width:1400px) { 
+@media screen and (min-width:1400px) {
 
   .tituloMain {
     margin-top: 0;
@@ -383,7 +387,7 @@ a {
     margin-top: 0;
   }
 
-  .mainBody-text{
+  .mainBody-text {
     font-size: 0.95vw;
     width: 25vw;
   }
@@ -415,4 +419,27 @@ a {
   }
 
 
+}
+
+/* Boton agregar al carrito */
+.btn-add-to-cart {
+  background-color: #F9A1AD;
+  border-radius: 30px;
+  font-size: 22px;
+  line-height: 29.26px;
+  border: 0px;
+  width: 286px;
+  height: 52px;
+}
+.btn-add-to-cart:hover, .btn-add-to-cart:disabled {
+  background-color: #c48b93
+}
+h2.titulo {
+  margin-top: 5vw;
+  color: #bb4c5a;
+}
+@media screen and (max-width:1200px) {
+  h2.titulo {
+    margin-top: 70px;
+  }
 }
