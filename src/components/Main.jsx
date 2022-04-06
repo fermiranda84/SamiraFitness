@@ -3,7 +3,8 @@ import mainCirculo from'../images/mainCirculo.png'
 import { Footer } from './Footer'
 import { MainBody } from './MainBody'
 import { MainContacto } from './MainContacto'
-import { ArrowUp} from 'react-bootstrap-icons';
+import { ArrowUp } from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
 
 export const Main = () => {
     return(
@@ -18,7 +19,7 @@ export const Main = () => {
                         <p>Siempre me apasionó entrenar y tener una vida saludable, motivo por el cual quise aprender más acerca del entrenamiento y sobre distintas disciplinas.</p>
                         <p>Con el tiempo entendí que la alimentación, entrenamiento y descanso son parte de un todo, y por eso decidí certificarme también en nutrición deportiva.</p>
                     </div>
-                    <button className="botonMain btn btn-light rounded-pill px-5 fw-bold mt-4">Ver programas</button>
+                    <Link to="/programas"><button className="botonMain btn btn-light rounded-pill px-5 fw-bold mt-4">Ver programas</button></Link>
             </div>
             <div>
             <Image className='mainCirculo' src={mainCirculo} fluid />

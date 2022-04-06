@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 
-export const MainContacto = () => {
+export const MainContacto = ({titulo = "¿Querés entrenar de forma personalizada online?", subtitulo = "Consultame precios y disponibilidad horaria"}) => {
 
     const [valorDisabled, setValorDisabled] = useState(true)
 
@@ -12,8 +12,8 @@ export const MainContacto = () => {
 
        <>
         <div id='contacto' className='container mt-5'>
-            <h3 className='text-center mainBody--title'>¿Querés entrenar de forma personalizada online?</h3>
-            <p className="text-center mainContacto--bajada">Consultame precios y disponibilidad horaria</p>
+            <h3 className='text-center mainBody--title'>{titulo}</h3>
+            <p className="text-center mainContacto--bajada">{subtitulo}</p>
             <Image className='mainBody--line mt-3' src={line} fluid />
 
             <Form action="mailto:samira.contreras93@gmail.com" method="get"  className='mt-5'>

@@ -42,8 +42,8 @@ export const MainBody = () => {
             </div>
             <div className='d-flex justify-content-center mt-5'>
                 <Image className='mainBody--foodImg m-5' src={galletitas} fluid />
-                <Image className='mainBody--foodImg m-5'  src={panqueques} fluid />
-                <Image className='mainBody--foodImg m-5'  src={panNube} fluid />
+                <Image className='mainBody--foodImg m-5' src={panqueques} fluid />
+                <Image className='mainBody--foodImg m-5' src={panNube} fluid />
             </div>
 
        </div>

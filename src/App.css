@@ -127,6 +127,7 @@ a {
 
 .mainBody--card--text {
   background-color: rgba(255,254,254,0.7);
+  font-size: 4vw;
 }
 
 .mainBody-text{
@@ -215,18 +216,22 @@ a {
 }
 
 .cardProgramas__card {
-  width: 15vw;
   background-color: #e1a2ab;
   border-radius: 0.5vw;
 }
 
 .cardProgramas__card--sizeTexto {
-  font-size: 0.75vw;
+  font-size: 3vw;
 }
 
 .footer__container--marginItems{
   margin-top: 3vw;
 }
+
+.cardProgramas__card--sizePrecio {
+  font-size: 6vw;
+}
+
 
 
 
@@ -235,10 +240,10 @@ a {
 @media screen and (min-width:768px) { 
 
 
-
   .mainBody-text{
     font-size: 2.25vw;
   }
+
 
 }
 
@@ -298,6 +303,23 @@ a {
     ;
   }
 
+  .cardProgramas__card {
+    width: 45vw;
+  }
+
+  .cardProgramas__card--sizeTexto {
+    font-size: 2vw;
+  }
+  
+  
+  .cardProgramas__card--sizePrecio {
+    font-size: 4vw;
+  }
+
+  .mainBody--card--text {
+    font-size: 2.5vw;
+  }
+
 }
 
 /* --------------------------Tablet 1200----------------------------- */
@@ -335,6 +357,10 @@ a {
     font-size: 1.6vw;
   }
 
+  .cardProgramas__card {
+    width: 40vw;
+  }
+
 
 }
 
@@ -369,6 +395,23 @@ a {
 
   .mainContacto--bajada {
     font-size: 1.1vw;
+  }
+
+  .cardProgramas__card {
+    width: 15vw;
+  }
+
+  .cardProgramas__card--sizeTexto {
+    font-size: 0.75vw;
+  }
+  
+  
+  .cardProgramas__card--sizePrecio {
+    font-size: 2vw;
+  }
+
+  .mainBody--card--text {
+    font-size: 1vw;
   }
 
 
