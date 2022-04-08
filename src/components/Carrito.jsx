@@ -5,6 +5,7 @@ import line from '../images/line.svg'
 import data from '../programas.json'
 import { CardProgramas } from './CardProgramas'
 import { useCart } from '../context/CartContext'
+import Confirmacion from './Confirmacion'
 // Imgs
 import programaMensual from '../images/programa-1.jpg'
 import EightWeeksProgram from '../images/programa-2.jpg'
@@ -19,9 +20,13 @@ const Carrito = () => {
     const { cart, removeItem, getTotal } = useCart();
     const remove = async (id) => removeItem(id);
     const total = getTotal();
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     return (
         <Container className='mainContainer'>
+            <Confirmacion show={open} handleClose={handleClose} titulo={'Gracias por tu compra!'} subtitulo={'Revisá el mail que ingresaste recién para confirmar el pago'} />
             <Row className="d-flex flex-column align-items-start mb-5">
                 <h2 className="tituloMain pt-2 text-center fw-bold">Finalizá tu compra</h2>
                 <Image className='mainBody--line my-2' src={line} fluid />
@@ -31,14 +36,14 @@ const Carrito = () => {
                 <Col xs={12} lg={6} className="d-flex justify-content-center">
                     <Form action="mailto:samira.contreras93@gmail.com" method="get" className="w-100 mx-5">
                         <Form.Group className="mb-3">
-                            <Form.Label>Texto</Form.Label>
+                            <Form.Label>Cliente</Form.Label>
                             <Form.Control type="text" />
                         </Form.Group>
                         <Form.Group className="mb-5">
-                            <Form.Label>Texto</Form.Label>
+                            <Form.Label>Correo</Form.Label>
                             <Form.Control type="text" />
                         </Form.Group>
-                        <button type="submit" className="btn-add-to-cart">Finalizar compra</button>
+                        <button type="submit" className="btn-add-to-cart" onClick={handleOpen}>Finalizar compra</button>
                     </Form>
                 </Col>
                 <Col xs={12} lg={6}>
