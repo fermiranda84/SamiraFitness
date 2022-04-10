@@ -7,17 +7,9 @@ CartContext.displayName = "CartContext";
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = React.useState([]);
 
-    const addItem = (item, qty) => {
-        const isIn = isInCart(item.id);
-        if (isIn) {
-            let itemIndex = cart.findIndex((prod) => prod.itemId === item.id);
-            let newCartArray = cart;
-            newCartArray[itemIndex].quantity += qty;
-            setCart(newCartArray)
-        } else {
-            let newItem = { itemId: item.id, item: item, quantity: qty };
-            setCart((prevState) => [...prevState, newItem])
-        }
+    const addItem = (item) => {
+        let newItem = { itemId: item.id, item: item };
+        setCart((prevState) => [...prevState, newItem]);
         return
     };
 
@@ -50,7 +42,7 @@ export const CartProvider = ({ children }) => {
     const getTotal = () => {
         let total = 0;
         cart.forEach((product) => {
-            let subtotal = Number(product.quantity) * Number(product.item.price)
+            let subtotal = Number(product.item.precio)
             total += subtotal;
         })
         return total

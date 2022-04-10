@@ -1,38 +1,41 @@
-
-import { Container, Navbar, Nav} from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 import { HashLink as Link } from 'react-router-hash-link'
 import Image from 'react-bootstrap/Image'
-import imgCarrito from'../images/cart4.svg'
+import imgCarrito from '../images/cart4.svg'
 import { Outlet } from "react-router-dom"
+import { useCart } from '../context/CartContext'
 
 export const NavBar = () => {
-    return(
-
+    const { cart } = useCart()
+    return (
         <>
-        <Navbar className='nav' variant='light' expand="lg">
-            <Container>
-                
+            <Navbar className='nav' variant='light' expand="lg">
+                <Container>
+
                     <Navbar.Brand as={Link} to="/">SAMIRA FITNESS</Navbar.Brand>
-                
-                   <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                
+
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="navBar__items">
-                        <Navbar.Text className='mx-3 fw-bold' as={Link} to="/">Home</Navbar.Text>
-                        <Navbar.Text className='mx-3 fw-bold' as={Link} to="/programas">Programas</Navbar.Text>
-                        <Navbar.Text className='mx-3 fw-bold' as={Link} to="#contacto">Contacto</Navbar.Text>
-                        <Navbar.Text className='mx-3 fw-bold' as={Link} to="#">Sobre mí</Navbar.Text>
-                    </Nav>
+                        <Nav className="navBar__items">
+                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="/">Home</Navbar.Text>
+                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="/programas">Programas</Navbar.Text>
+                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="#contacto">Contacto</Navbar.Text>
+                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="#">Sobre mí</Navbar.Text>
+                        </Nav>
                     </Navbar.Collapse>
-                    
-               
-                <Navbar.Collapse className='justify-content-end'>
-                    <Nav.Link className='mx-2' as={Link} to="/carrito"><Image className='iconoCarrito' src={imgCarrito} fluid /></Nav.Link>
-                </Navbar.Collapse>
-                
-            </Container>
-        </Navbar>
-        <Outlet />
+
+
+                    <Navbar.Collapse className='justify-content-end'>
+                        <Nav.Link className='mx-2 d-flex align-items-center' as={Link} to="/cart">
+                            <Image className='iconoCarrito' src={imgCarrito} fluid />
+                            <p style={{ color: 'black', margin: '0', marginLeft: '10px' }}>{`(${cart.length})`}</p>
+                        </Nav.Link>
+                    </Navbar.Collapse>
+
+                </Container>
+            </Navbar>
+            <Outlet />
         </>
     )
 }

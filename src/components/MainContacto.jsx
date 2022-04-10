@@ -1,14 +1,20 @@
+import * as React from 'react';
 import Image from 'react-bootstrap/Image'
 import line from '../images/line.svg'
+import Confirmacion from './Confirmacion'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 
 export const MainContacto = ({titulo = "¿Querés entrenar de forma personalizada online?", subtitulo = "Consultame precios y disponibilidad horaria"}) => {
-
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const [valorDisabled, setValorDisabled] = useState(true)
 
     return (
+        <>
+        <Confirmacion show={open} handleClose={handleClose} titulo={'Listo!'} subtitulo={'Tu consulta fue enviada con éxito. A la brevedad te estaré respondiendo'} />
         <div id='contacto' className='container mt-5'>
             <h3 className='text-center mainBody--title'>{titulo}</h3>
             <p className="text-center mainContacto--bajada">{subtitulo}</p>
@@ -51,7 +57,7 @@ export const MainContacto = ({titulo = "¿Querés entrenar de forma personalizad
                         <Form.Check onClick={() => setValorDisabled((prevCheck) => !prevCheck)} className='mt-3' type="checkbox" label="Acepto términos y condiciones" />
                     </Form.Group>
                     <div className='mainContacto--form--boton'>
-                        <Button className='botonMain btn-light rounded-pill px-5 fw-bold mt-4' disabled={valorDisabled} variant="primary" type="submit">
+                        <Button className='botonMain btn-light rounded-pill px-5 fw-bold mt-4' disabled={valorDisabled} variant="primary" type="button" onClick={handleOpen}>
                             Enviar
                         </Button>
                     </div>
@@ -59,5 +65,6 @@ export const MainContacto = ({titulo = "¿Querés entrenar de forma personalizad
                 </div>
             </Form>
         </div>
+        </>
     )
 }

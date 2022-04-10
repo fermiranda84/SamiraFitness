@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { Footer } from './Footer'
 import { Col, Container, Row, Stack } from 'react-bootstrap'
 import Boton from './Boton'
@@ -19,6 +18,7 @@ import giftCard from '../images/programa-8.jpg'
 
 const InfoPrograma = () => {
     let { tipo, programa } = useParams();
+    const [id, setId] = React.useState(0)
     const [titulo, setTitulo] = React.useState("");
     const [deQue, setDeQue] = React.useState("");
     const [aQuien, setAQuien] = React.useState("");
@@ -49,6 +49,7 @@ const InfoPrograma = () => {
                 console.error('Mal hecho pa');
                 break;
         }
+        setId(program)
         setTitulo(program.titulo)
         setDeQue(program.deQue);
         setAQuien(program.aQuien);
@@ -109,14 +110,14 @@ const InfoPrograma = () => {
                 </Col>
                 <Col xs={12} lg={5} className="d-flex flex-column align-items-center justify-content-start">
                     <img src={imagen} alt="la fotito" width={380} height={380} className="mb-4" />
-                    <Boton />
+                    <Boton item={id} />
                 </Col>
             </Row>
             <Row className="my-5">
                 <h3>También te puede interesar:</h3>
                 <hr />
                 <Stack direction="horizontal" gap={3}>
-                    {tmb?.map((programa, index) => <Link className="cards-links" key={index} to={`/${tipo}/${programa.url}`}><CardProgramas item={programa} /></Link>)}
+                    {tmb?.map((programa, index) => <CardProgramas item={programa} tipo={tipo} />)}
                 </Stack>
             </Row>
             <hr style={{ width: '100%' }} />

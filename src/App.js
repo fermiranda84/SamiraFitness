@@ -5,6 +5,7 @@ import { Main } from "./components/Main"
 import { NavBar } from './components/NavBar';
 import { CartProvider } from './context/CartContext'
 import InfoPrograma from './components/InfoPrograma';
+import Carrito from './components/Carrito';
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
                 <Route path="" element={<Main />} />
                 <Route path="programas" element={<Programas />} />
                 <Route path=":tipo/:programa" element={<InfoPrograma />} />
+                <Route path="cart" element={<Carrito />} />
               </Route>
             </Routes>
-
           </BrowserRouter>
         </header>
       </div>
