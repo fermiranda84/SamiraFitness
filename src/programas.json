@@ -3,7 +3,7 @@
         {
             "id": 1,
             "titulo": "Programa Mensual",
-            "imagen": "programaMensual",
+            "imagen": "../images/programa-1.jpg",
             "precio": 4500,
             "duracion": "4 SEMANAS",
             "descripcion": "ENTRENAMIENTO + GUIA ALIMENTARIA PERSONALIZADO",

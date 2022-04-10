@@ -4,7 +4,6 @@ import data from '../programas.json'
 import { CardProgramas } from './CardProgramas'
 import { ArrowUp } from 'react-bootstrap-icons'
 import { Footer } from './Footer'
-import { Link } from 'react-router-dom'
 
 export const Programas = () => {
 
