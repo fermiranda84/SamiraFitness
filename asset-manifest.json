@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/SamiraFitness/static/css/main.aeb0c7d5.css",
+    "main.js": "/SamiraFitness/static/js/main.710b05aa.js",
+    "static/js/787.b963df55.chunk.js": "/SamiraFitness/static/js/787.b963df55.chunk.js",
+    "static/media/mainCirculo.png": "/SamiraFitness/static/media/mainCirculo.3d6c33fd2fc57d8d6310.png",
+    "static/media/panqueques.jpg": "/SamiraFitness/static/media/panqueques.42e7be491e9e567e0b5e.jpg",
+    "static/media/galletitas.jpg": "/SamiraFitness/static/media/galletitas.bae1cbacfc06e552ef34.jpg",
+    "static/media/pan_nube.jpg": "/SamiraFitness/static/media/pan_nube.083b74d2d3bc43333681.jpg",
+    "static/media/MadeMirage-Medium.otf": "/SamiraFitness/static/media/MadeMirage-Medium.c934e0ca0d1e70a594ad.otf",
+    "static/media/programa-7.jpg": "/SamiraFitness/static/media/programa-7.ea78c517e7c796d83fd2.jpg",
+    "static/media/programa-1.jpg": "/SamiraFitness/static/media/programa-1.2d946a82748d62ee8026.jpg",
+    "static/media/programa-8.jpg": "/SamiraFitness/static/media/programa-8.0bd061e975043c30fa9c.jpg",
+    "static/media/programa-2.jpg": "/SamiraFitness/static/media/programa-2.9ea53428cbfd00ba4090.jpg",
+    "static/media/cambios_dos.jpg": "/SamiraFitness/static/media/cambios_dos.edb75b2963191929e09e.jpg",
+    "static/media/programa-5.jpg": "/SamiraFitness/static/media/programa-5.02389b3686cbaf8bbd77.jpg",
+    "static/media/programa-4.jpg": "/SamiraFitness/static/media/programa-4.30aa39a3e0f4dfb86dcf.jpg",
+    "static/media/cambios_uno.jpg": "/SamiraFitness/static/media/cambios_uno.e6237c3c30d7abe9cd7d.jpg",
+    "static/media/programa-3.jpg": "/SamiraFitness/static/media/programa-3.149a3f6ad9f41179b370.jpg",
+    "static/media/cambios_tres.jpg": "/SamiraFitness/static/media/cambios_tres.16dc9af080f28d27b388.jpg",
+    "static/media/programa-6.jpg": "/SamiraFitness/static/media/programa-6.ae04fa0089580f3b7c63.jpg",
+    "static/media/ModernSans-Light.otf": "/SamiraFitness/static/media/ModernSans-Light.bebb6d2d7adb7481905a.otf",
+    "static/media/cart4.svg": "/SamiraFitness/static/media/cart4.af53c2493e27421b959f41a7550defdc.svg",
+    "index.html": "/SamiraFitness/index.html",
+    "static/media/line.svg": "/SamiraFitness/static/media/line.22f2cf4a3df2ba361bbeac8bd3a79b5e.svg",
+    "static/media/pointer.svg": "/SamiraFitness/static/media/pointer.4bbaad2bdb66780348c9.svg",
+    "main.aeb0c7d5.css.map": "/SamiraFitness/static/css/main.aeb0c7d5.css.map",
+    "main.710b05aa.js.map": "/SamiraFitness/static/js/main.710b05aa.js.map",
+    "787.b963df55.chunk.js.map": "/SamiraFitness/static/js/787.b963df55.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aeb0c7d5.css",
+    "static/js/main.710b05aa.js"
+  ]
+}
