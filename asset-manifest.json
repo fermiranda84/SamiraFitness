@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SamiraFitness/static/css/main.aeb0c7d5.css",
-    "main.js": "/SamiraFitness/static/js/main.710b05aa.js",
+    "main.js": "/SamiraFitness/static/js/main.6dcb8c66.js",
     "static/js/787.b963df55.chunk.js": "/SamiraFitness/static/js/787.b963df55.chunk.js",
     "static/media/mainCirculo.png": "/SamiraFitness/static/media/mainCirculo.3d6c33fd2fc57d8d6310.png",
     "static/media/panqueques.jpg": "/SamiraFitness/static/media/panqueques.42e7be491e9e567e0b5e.jpg",
@@ -25,11 +25,11 @@
     "static/media/line.svg": "/SamiraFitness/static/media/line.22f2cf4a3df2ba361bbeac8bd3a79b5e.svg",
     "static/media/pointer.svg": "/SamiraFitness/static/media/pointer.4bbaad2bdb66780348c9.svg",
     "main.aeb0c7d5.css.map": "/SamiraFitness/static/css/main.aeb0c7d5.css.map",
-    "main.710b05aa.js.map": "/SamiraFitness/static/js/main.710b05aa.js.map",
+    "main.6dcb8c66.js.map": "/SamiraFitness/static/js/main.6dcb8c66.js.map",
     "787.b963df55.chunk.js.map": "/SamiraFitness/static/js/787.b963df55.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aeb0c7d5.css",
-    "static/js/main.710b05aa.js"
+    "static/js/main.6dcb8c66.js"
   ]
 }
