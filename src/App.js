@@ -16,6 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<NavBar />}>
                 <Route path="" element={<Main />} />
+                <Route path="SamiraFitness" element={<Main />} />
                 <Route path="programas" element={<Programas />} />
                 <Route path=":tipo/:programa" element={<InfoPrograma />} />
                 <Route path="cart" element={<Carrito />} />
