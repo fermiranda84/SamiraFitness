@@ -7,14 +7,14 @@ import { CardProgramas } from './CardProgramas'
 import { useCart } from '../context/CartContext'
 import Confirmacion from './Confirmacion'
 // Imgs
-import programaMensual from '../images/programa-1.jpg'
-import EightWeeksProgram from '../images/programa-2.jpg'
-import TwelveWeeksProgram from '../images/programa-3.jpg'
-import clasesAdvance from '../images/programa-4.jpg'
-import TwelveClasesOnline from '../images/programa-5.jpg'
-import TwentyClasesOnline from '../images/programa-6.jpg'
-import recetario from '../images/programa-7.jpg'
-import giftCard from '../images/programa-8.jpg'
+// import programaMensual from '../images/programa-1.jpg'
+// import EightWeeksProgram from '../images/programa-2.jpg'
+// import TwelveWeeksProgram from '../images/programa-3.jpg'
+// import clasesAdvance from '../images/programa-4.jpg'
+// import TwelveClasesOnline from '../images/programa-5.jpg'
+// import TwentyClasesOnline from '../images/programa-6.jpg'
+// import recetario from '../images/programa-7.jpg'
+// import giftCard from '../images/programa-8.jpg'
 
 const Carrito = () => {
     const { cart, removeItem, getTotal } = useCart();
@@ -51,8 +51,8 @@ const Carrito = () => {
                     {cart.length > 0
                         ? cart.map((item, index) =>
                             <Row key={index} className="my-2 d-flex align-items-center">
-                                {/* <Col className="d-flex justify-content-center text-center fs-5"><img src={item.item.imagen} alt="fotito" width={71} height={71} /></Col> */}
-                                <Col className="d-flex justify-content-center text-center fs-5"><span style={{ width: '70px', height: '70px', backgroundColor: '#ccc' }} /></Col>
+                                <Col className="d-flex justify-content-center text-center fs-5"><img src={item.item.imagen} alt="fotito" width={71} height={71} /></Col>
+                                {/* <Col className="d-flex justify-content-center text-center fs-5"><span style={{ width: '70px', height: '70px', backgroundColor: '#ccc' }} /></Col> */}
                                 <Col className="d-flex justify-content-center text-center fs-5">{item.item.titulo}</Col>
                                 <Col className="d-flex justify-content-center text-center fs-5">$ {item.item.precio}</Col>
                                 <Col className="d-flex justify-content-center text-center fs-5"><span className="iconoCarrito" onClick={() => remove(item.itemId)}>X</span></Col>

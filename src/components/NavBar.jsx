@@ -1,27 +1,27 @@
+import * as React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap'
 import { HashLink as Link } from 'react-router-hash-link'
 import Image from 'react-bootstrap/Image'
 import imgCarrito from '../images/cart4.svg'
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import { useCart } from '../context/CartContext'
 
 export const NavBar = () => {
-    const { cart } = useCart()
+    const { cart } = useCart();
+    let location = useLocation().pathname;
     return (
         <>
             <Navbar className='nav' variant='light' expand="lg">
                 <Container>
-
                     <Navbar.Brand as={Link} to="/">SAMIRA FITNESS</Navbar.Brand>
-
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="navBar__items">
                             <Navbar.Text className='mx-3 fw-bold' as={Link} to="/">Home</Navbar.Text>
                             <Navbar.Text className='mx-3 fw-bold' as={Link} to="/programas">Programas</Navbar.Text>
-                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="#contacto">Contacto</Navbar.Text>
-                            <Navbar.Text className='mx-3 fw-bold' as={Link} to="#">Sobre mí</Navbar.Text>
+                            {location !== "/programas" && location !== "/cart" && <Navbar.Text className='mx-3 fw-bold' as={Link} to="#contacto">Contacto</Navbar.Text>}
+                            {location === "/" && <Navbar.Text className='mx-3 fw-bold' as={Link} to="#">Sobre mí</Navbar.Text>}
                         </Nav>
                     </Navbar.Collapse>
 
