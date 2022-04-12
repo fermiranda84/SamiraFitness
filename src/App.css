@@ -120,7 +120,7 @@ a.cards-links {
 }
 
 .mainBody--card {
-  background-color: #e1a2ab;
+  background-color: #f6e2e4;
   border-radius: 0.5vw;
 }
 
@@ -220,7 +220,7 @@ a.cards-links {
 }
 
 .cardProgramas__card {
-  background-color: #e1a2ab;
+  background-color: #f6e2e4;
   border-radius: 0.5vw;
 }
 
@@ -308,11 +308,11 @@ a.cards-links {
   }
 
   .cardProgramas__card {
-    width: 45vw;
+    width: 40vw;
   }
 
   .cardProgramas__card--sizeTexto {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 
 
@@ -364,6 +364,11 @@ a.cards-links {
   .cardProgramas__card {
     width: 40vw;
   }
+
+  .mainBody--card--text {
+    font-size: 1.6vw;
+  }
+
 
 
 }
