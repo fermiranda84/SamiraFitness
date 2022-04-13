@@ -46,6 +46,11 @@ a.cards-links {
   padding: 0.3vw;
 }
 
+.iconoCarrito:hover {
+  cursor: pointer;
+  background-color: #c48b93;
+}
+
 .tituloMain {
   color: #bb4c5a;
   margin-top: 10vw;
@@ -132,6 +137,20 @@ a.cards-links {
 .mainBody--card--text {
   background-color: rgba(255, 254, 254, 0.7);
   font-size: 4vw;
+}
+
+@media screen and (max-width: 992px) {
+  .mainBody--card--text {
+    font-size: 3vw !important;
+  }
+
+  .cardProgramas__card--sizePrecio {
+    font-size: 3vw !important;
+  }
+
+  .cardProgramas__card--sizeTexto {
+    font-size: 2vw !important;
+  }
 }
 
 .mainBody-text {
@@ -489,9 +508,11 @@ h2.titulo {
   letter-spacing: 0em;
   text-align: center;
 }
+
 .modal-header {
   border-bottom: 1.5px solid rgba(225, 162, 171, 0.5);
 }
+
 .modal-footer {
   border-top: 1.5px solid rgba(225, 162, 171, 0.5);
 }

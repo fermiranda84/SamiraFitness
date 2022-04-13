@@ -63,9 +63,20 @@ export const CardProgramas = (data) => {
 
   return (
 
-    <div className='d-flex flex-column me-xl-5 mt-2 mb-5'>
-      <Link to={`/${data.tipo}/${data.item.url}`} style={{ color: 'inherit' }}>
-        <div className='cardProgramas__card m-2 p-2'>
+    <div className='d-flex flex-column align-items-center me-xl-5 mt-2 mb-5'>
+      {data.tipo !== "extras"
+        ? <Link to={`/${data.tipo}/${data.item.url}`} style={{ color: 'inherit' }}>
+          <div className='cardProgramas__card m-2 p-2'>
+            <div className='mainBody--card--text rounded p-1 text-center fw-bold mb-2'>{data.item.titulo}</div>
+            <Image className='mainBody--card--img' src={imagen} fluid />
+            <div className='mainBody--card--text rounded p-1 text-center fw-bold mt-2'>
+              <div className='cardProgramas__card--sizePrecio'>${data.item.precio}</div>
+              <div className='cardProgramas__card--sizeTexto'>{data.item.duracion}</div>
+              <div className='cardProgramas__card--sizeTexto'>{data.item.descripcion}</div>
+            </div>
+          </div>
+        </Link>
+        : <div className='cardProgramas__card m-2 p-2'>
           <div className='mainBody--card--text rounded p-1 text-center fw-bold mb-2'>{data.item.titulo}</div>
           <Image className='mainBody--card--img' src={imagen} fluid />
           <div className='mainBody--card--text rounded p-1 text-center fw-bold mt-2'>
@@ -73,11 +84,10 @@ export const CardProgramas = (data) => {
             <div className='cardProgramas__card--sizeTexto'>{data.item.duracion}</div>
             <div className='cardProgramas__card--sizeTexto'>{data.item.descripcion}</div>
           </div>
-        </div>
-      </Link>
-      <Button className='botonMain btn-light rounded-pill px-3 fw-bold mt-2' variant="primary" onClick={() => add(data.item)}>
-      Agregar al carrito
-    </Button>
+        </div>}
+      <Button className='botonMain btn-light rounded-pill px-5 fw-bold mt-2' variant="primary" onClick={() => add(data.item)}>
+        Agregar al carrito
+      </Button>
     </div >
 
   )
