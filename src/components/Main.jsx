@@ -12,7 +12,7 @@ export const Main = () => {
        <>
         <div id='header' className="d-flex flex-wrap align-items-center container mainContainer justify-content-between">
             <div>
-                    <h2 className="tituloMain fw-bold mb-4">Una meta sin un plan es solo un deseo</h2>
+                    <h2 id="sobreMi" className="tituloMain fw-bold mb-4">Una meta sin un plan es solo un deseo</h2>
                 
                     <div className='textMain'>
                         <p>Hola! Me llamo Samira y soy entrenadora.</p>
