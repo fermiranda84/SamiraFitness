@@ -5,9 +5,14 @@ import Image from 'react-bootstrap/Image'
 import imgCarrito from '../images/cart4.svg'
 import { Outlet, useLocation } from "react-router-dom"
 import { useCart } from '../context/CartContext'
+import { useParams } from 'react-router-dom'
+
 
 export const NavBar = () => {
-    const { cart } = useCart();
+
+    const { cart } = useCart()
+    const {programa} = useParams()
+
     let location = useLocation().pathname;
     return (
         <>
@@ -21,7 +26,7 @@ export const NavBar = () => {
                             <Navbar.Text className='mx-3 fw-bold' as={Link} to="/">Home</Navbar.Text>
                             <Navbar.Text className='mx-3 fw-bold' as={Link} to="/programas">Programas</Navbar.Text>
                             {location !== "/programas" && location !== "/cart" && <Navbar.Text className='mx-3 fw-bold' as={Link} to="#contacto">Contacto</Navbar.Text>}
-                            {location !== "/programas" && location !== "/cart" && <Navbar.Text className='mx-3 fw-bold' as={Link} to="#sobreMi">Sobre mí</Navbar.Text>}
+                            {location !== "/programas" && location !== "/cart" && location !== `/programas/${programa}` && <Navbar.Text className='mx-3 fw-bold' as={Link} to="#sobreMi">Sobre mí</Navbar.Text>}
                         </Nav>
                     </Navbar.Collapse>
 
